@@ -1,11 +1,9 @@
 (ns pandigital)
 
-(defn pandigital? [n]
-  (let [n-string (sort (Integer/toString n))]
-    n-string
-    ))
+(defn pandigital? [numbers]
+  "Returns true if input numbers are 1-9 pandigital. Input: list of numbers"
+  (= (apply str (sort (apply str numbers))) "123456789"))
 
-(defn n-len-valid-pan [n]
-  )
-
-(pandigital/pandigital? 3245)
+(pandigital/pandigital? '(3245)) ;false 
+(pandigital/pandigital? [123 45 67 98]) ;true
+(source pandigital/pandigital?)
