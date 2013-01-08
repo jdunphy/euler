@@ -10,3 +10,7 @@
        (sum-fb (dec n)))))
 
 (println (sum-fb 999))
+
+;; solution 2
+;; blergh
+(apply + (filter fizzy (range 1 1000)))
