@@ -5,3 +5,5 @@ pom.xml
 .lein-deps-sum
 repl-port
 clojure/target
+node_modules/
+target/
