@@ -41,3 +41,6 @@
 (def largest-pandigital
   (last (sort (filter prime?
                       (map #(Integer/parseInt (apply str %)) (combo/permutations (reverse (range 1 8))))))))
+
+
+;; problem 43 is also a pandigital problem 0-9 pandigital

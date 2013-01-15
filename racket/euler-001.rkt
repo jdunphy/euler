@@ -6,14 +6,11 @@
 (define (mod5 n) (zero? (modulo n 5)))
 
 (apply + (remove-duplicates
-          (append (filter mod3 (range 1 1000)) (filter mod5 (range 1 1000))))) 
-
+          (append (filter mod3 (range 1 1000)) (filter mod5 (range 1 1000)))))
 
 ; solution 2
 (define (modder mod) (lambda (num) (zero? (modulo num mod))))
 
 (apply + (remove-duplicates
           (append (filter (modder 3) (range 1 1000))
-                  (filter (modder 5) (range 1 1000))))) 
-
-
+                  (filter (modder 5) (range 1 1000)))))
